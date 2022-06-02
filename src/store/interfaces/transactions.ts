@@ -1,10 +1,10 @@
-interface IBase {
-  id: string | undefined;
+interface IBaseEntitiy {
+  id: string | null;
 }
 
-export interface ITransactions extends IBase {
+export interface ITransaction extends IBaseEntitiy {
   summary: string;
-  category: Array<TCategory>;
+  category: TCategory;
   sum: number;
   currency: string;
   paid: string;
